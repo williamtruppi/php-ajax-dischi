@@ -28,3 +28,24 @@ nav .navbar img {
 main {
   background-color: #191919;
 }
+main .disk_box {
+  padding-top: 80px;
+  flex-wrap: wrap;
+}
+main .disk_box .disk_container {
+  width: calc(100% / 4);
+}
+main .disk_box .disk_container .disk:not(:nth-child(4)) {
+  padding: 10px 10px;
+  margin: 0 10px 10px 10px;
+  background-color: black;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+main .disk_box .disk_container .disk:not(:nth-child(4)) h1 {
+  font-size: 15px;
+}
+main .disk_box .disk_container .disk:not(:nth-child(4)) img {
+  height: 150px;
+}

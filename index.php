@@ -1,4 +1,8 @@
-<?php  ?>
+<?php
+
+include './partials/db.php';
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,13 +28,27 @@
   <main>
 
     <!-- apertura disk_box -->
-    <div class="disk_box">
+    <div class="disk_box container d-flex">
 
-      <!-- apertura disk_container -->
-      <div class="disk_container">
+      <?php foreach ($diskList as $disk) { ?>
 
-      </div>
-      <!-- chiusura disk_container -->
+        <!-- apertura disk_container -->
+        <div class="disk_container">
+
+          <!-- apertura disk -->
+          <div class="disk d-flex">
+            <img src="<?php echo $disk['poster']; ?>" alt="">
+            <h1><?php echo $disk['title']; ?></h1>
+            <h3><?php echo $disk['author']; ?></h3>
+            <h3><?php echo $disk['genre']; ?></h3>
+            <h3><?php echo $disk['year']; ?></h3>
+          </div>
+          <!-- chiusura disk -->
+
+        </div>
+        <!-- chiusura disk_container -->
+
+      <?php } ?>
 
     </div>
     <!-- chiusura disk_box -->
