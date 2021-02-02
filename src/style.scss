@@ -1,0 +1,33 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.container{
+  width: 70vw;
+  margin: 0 auto;
+}
+
+nav{
+  padding: 5px 0;
+  background-color: black;
+
+  .navbar{
+    align-items: center;
+    height: 100%;
+    img {
+      height: 50px;
+    }
+  }
+
+  
+}
+
+main{
+  background-color: #191919;
+}
