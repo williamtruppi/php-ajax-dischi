@@ -35,7 +35,7 @@ main .disk_box {
 main .disk_box .disk_container {
   width: calc(100% / 4);
 }
-main .disk_box .disk_container .disk:not(:nth-child(4n)) {
+main .disk_box .disk_container .disk {
   padding: 10px 10px;
   margin: 0 10px 10px 10px;
   background-color: black;
@@ -43,9 +43,12 @@ main .disk_box .disk_container .disk:not(:nth-child(4n)) {
   align-items: center;
   color: white;
 }
-main .disk_box .disk_container .disk:not(:nth-child(4n)) h1 {
+main .disk_box .disk_container .disk h1 {
   font-size: 15px;
 }
-main .disk_box .disk_container .disk:not(:nth-child(4n)) img {
-  height: 150px;
+main .disk_box .disk_container .disk .poster_image {
+  height: 40%;
+}
+main .disk_box .disk_container .disk .poster_image img {
+  width: 100%;
 }

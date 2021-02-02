@@ -36,8 +36,7 @@ main{
     .disk_container{
       width: calc(100% / 4);
       
-
-      .disk:not(:nth-child(4n)) {
+      .disk {
         padding: 10px 10px;
         margin: 0 10px 10px 10px;
         background-color: black;
@@ -49,8 +48,12 @@ main{
           font-size: 15px;
         }
 
-        img {
-          height: 150px;
+        .poster_image{
+          height: 40%;
+
+          img{
+            width: 100%;
+          }
         }
       }
     }

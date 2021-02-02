@@ -7,7 +7,22 @@
   \*********************/
 /***/ (() => {
 
+var app = new Vue({
+  el: ".wrapper",
+  data: {
+    discList: []
+  },
+  mounted: function mounted() {
+    var _this = this;
 
+    axios.get("http://localhost/php-ajax-dischi/milestone%202/src/db.php").then(function (response) {
+      _this.discList = response.data;
+      console.log(_this.discList);
+    })["catch"](function (error) {
+      console.log(error);
+    });
+  }
+});
 
 /***/ }),
 
