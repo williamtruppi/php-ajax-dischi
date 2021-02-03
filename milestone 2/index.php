@@ -17,6 +17,14 @@
     <nav>
       <div class="navbar container d-flex">
         <img src="dist/img/logo.png" alt="">
+        <select name="" id="selectGenre" v-model="selectedGenre" @change="chooseGenre()">
+          <option disabled value="">Please select one</option>
+          <option value="All">All</option>
+          <option value="Pop">Pop</option>
+          <option value="Rock">Rock</option>
+          <option value="Metal">Metal</option>
+          <option value="Jazz">Jazz</option>
+        </select>
       </div>
     </nav>
     <!-- chiusura navbar -->
@@ -54,7 +62,7 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-  <script src="src/main.js"></script>
+  <script src="dist/js/main.js"></script>
 </body>
 
 </html>

@@ -10,14 +10,27 @@
 var app = new Vue({
   el: ".wrapper",
   data: {
-    discList: []
+    discList: [],
+    selectedGenre: ""
+  },
+  methods: {
+    chooseGenre: function chooseGenre() {
+      var _this = this;
+
+      axios.get("./src/db.php").then(function (response) {
+        console.log("ciao");
+        console.log(response.data.genre);
+        _this.discList = response.data;
+      })["catch"](function (error) {
+        console.log(error);
+      });
+    }
   },
   mounted: function mounted() {
-    var _this = this;
+    var _this2 = this;
 
-    axios.get("http://localhost/php-ajax-dischi/milestone%202/src/db.php").then(function (response) {
-      _this.discList = response.data;
-      console.log(_this.discList);
+    axios.get("./src/db.php").then(function (response) {
+      _this2.discList = response.data;
     })["catch"](function (error) {
       console.log(error);
     });

@@ -20,6 +20,7 @@ nav {
 nav .navbar {
   align-items: center;
   height: 100%;
+  justify-content: space-between;
 }
 nav .navbar img {
   height: 50px;
@@ -33,10 +34,12 @@ main .disk_box {
   flex-wrap: wrap;
 }
 main .disk_box .disk_container {
-  width: calc(100% / 4);
+  max-width: calc(100% / 4);
+  height: auto;
 }
 main .disk_box .disk_container .disk {
-  padding: 10px 10px;
+  height: auto;
+  padding: 20px 10px;
   margin: 0 10px 10px 10px;
   background-color: black;
   flex-direction: column;
@@ -47,8 +50,9 @@ main .disk_box .disk_container .disk h1 {
   font-size: 15px;
 }
 main .disk_box .disk_container .disk .poster_image {
-  height: 40%;
+  max-width: 80%;
 }
 main .disk_box .disk_container .disk .poster_image img {
   width: 100%;
+  height: auto;
 }
