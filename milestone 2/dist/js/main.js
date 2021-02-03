@@ -17,20 +17,35 @@ var app = new Vue({
     chooseGenre: function chooseGenre() {
       var _this = this;
 
+      this.discList = [];
       axios.get("./src/db.php").then(function (response) {
-        console.log("ciao");
-        console.log(response.data.genre);
-        _this.discList = response.data;
+        var tempArray = response.data;
+        console.log(_this.selectedGenre);
+        tempArray.forEach(function (element) {
+          if (_this.selectedGenre !== "All") {
+            if (element.genre === _this.selectedGenre) {
+              _this.discList.push(element);
+            }
+          } else {
+            _this.discList = tempArray;
+          }
+        });
+        console.log(_this.discList);
       })["catch"](function (error) {
         console.log(error);
       });
     }
   },
-  mounted: function mounted() {
+  created: function created() {
     var _this2 = this;
 
     axios.get("./src/db.php").then(function (response) {
       _this2.discList = response.data;
+      console.log(_this2.discList);
+
+      _this2.discList.forEach(function (element) {
+        Vue.set(element, "visible", true);
+      });
     })["catch"](function (error) {
       console.log(error);
     });

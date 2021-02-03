@@ -13,6 +13,11 @@
   margin: 0 auto;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #191919;
+}
+
 nav {
   padding: 5px 0;
   background-color: black;
@@ -26,9 +31,6 @@ nav .navbar img {
   height: 50px;
 }
 
-main {
-  background-color: #191919;
-}
 main .disk_box {
   padding-top: 80px;
   flex-wrap: wrap;
